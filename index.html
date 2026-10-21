@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Диаблоид — Клинок Скверны</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="stage">
+  <div id="app">
+    <canvas id="game" width="960" height="540"></canvas>
+
+    <div id="touch-ui">
+      <button class="tbtn" id="btn-potion" data-act="potion">Зелье</button>
+      <button class="tbtn" id="btn-skill" data-act="skill">Вихрь</button>
+      <button class="tbtn" id="btn-attack" data-act="attack">Удар</button>
+    </div>
+
+    <div id="overlay">
+      <div class="screen" id="title-screen">
+        <h1>Диаблоид</h1>
+        <h2>Клинок Скверны</h2>
+        <p class="lead">Спускайтесь в глубину подземелья, рубите чудовищ мечом и собирайте добычу.</p>
+        <ul class="keys">
+          <li><b>WASD</b> / <b>стрелки</b> — движение</li>
+          <li><b>ЛКМ</b> / <b>Пробел</b> — удар мечом</li>
+          <li><b>ПКМ</b> / <b>Q</b> — вихрь клинка (20 маны)</li>
+          <li><b>1</b> — зелье здоровья, <b>2</b> — зелье маны</li>
+          <li><b>Esc</b> — пауза, <b>R</b> — новая игра</li>
+          <li>Снаряжение и добыча — в панели справа, клик по предмету экипирует его</li>
+        </ul>
+        <button class="btn" id="btn-start">Войти в подземелье</button>
+      </div>
+
+      <div class="screen hidden" id="end-screen">
+        <h1 id="end-title">Вы погибли</h1>
+        <p id="end-text"></p>
+        <button class="btn" id="btn-again">Заново</button>
+      </div>
+
+      <div class="screen hidden" id="pause-screen">
+        <h1>Пауза</h1>
+        <p>Esc — продолжить</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/input.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/dungeon.js"></script>
+<script src="js/entities.js"></script>
+<script src="js/render.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
